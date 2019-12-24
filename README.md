@@ -6,6 +6,8 @@ Run es un pequeño programa que se encarga de compilar y ejecutar los ficheros *
 
 Es necesario para mayor comodidad agregar el ejecutable run.exe al PATH. Posteriormente se puede ejecutar de la siguiente manera:
 > run [archivo.c] [parametros]
+
+O si el archivo se encuentra en otra carpeta:
 > run [..\archivo.c] [parametros] 
 
 ## Pendientes
