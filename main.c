@@ -16,9 +16,21 @@ int main(int argc,  char *argv[])
         // el primero es el nombre del presente programa (run)
         // el siguiente debe ser el archivo a compilar y ejecutar
         // los consiguientes son los parametros del anterior
-        FILE *file = fopen(argv[1], "a+");
+        FILE *file = fopen(argv[1], "r");
+        
+        // ayuda sobre la funcionalidad del programa run
+        if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "help") == 0)
+        {
+            printf("Usar run en la terminal:\n");
+            printf("\trun [archivo.c] [parametros]\n");
+            printf("\trun [..\\archivo.c] [parametros]\n");
+            printf("Donde parametros pueden ser n cantidad que adminta el ejecutable destino\n");
+            printf("Ejemplo:\n");
+            printf("\trun other.c ulises lopez");
+            exit(0);
+        }
         // existe el archivo
-        if (file != NULL) 
+        else if (file != NULL) 
         {
             char* shell = "gcc -o \0"; 
             char* fileName = EXTRACT_FILE_NAME(argv[1]);
