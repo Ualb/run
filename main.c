@@ -60,6 +60,10 @@ int main(int argc,  char *argv[])
                 }
                 else
                 {
+                    fileName = JOIN_STRINGS(fileName, ".exe");
+                    // eliminando el reciduo si se ejecuta con errores
+                    // el compilador gcc igualmente crea el ejecutable
+                    remove(fileName);
                     ERROR_HAPPED(3);
                     exit(1);
                 }
