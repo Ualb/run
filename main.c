@@ -47,6 +47,7 @@ int main(int argc, char *argv[])
             {
                 fclose(file);
                 char *aux = "";
+                aux = JOIN_STRINGS(aux, "./");
                 aux = JOIN_STRINGS(aux, fileName);
                 aux = JOIN_STRINGS(aux, ".exe");
                 // se agregan los parametros pasados por consola
